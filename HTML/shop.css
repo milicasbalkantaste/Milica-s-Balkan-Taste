@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.sidebar {
+  height: 100vh;
+  width: 220px;
+  background: #a0522d; /* warm sienna */
+  color: #fff8f0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 30px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+  border-right: 2px solid rgba(255, 214, 165, 0.5);
+}
+
+.sidebar h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  color: #ffd194; /* warm gold */
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  background: linear-gradient(to bottom, #8b2f23, #73221a);
+  padding: 10px 0;
+  border-radius: 6px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 20px;
+  color: #fff8f0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.2s, padding-left 0.2s;
+  position: relative; /* Explicitly added to ensure ::after positioning */
+}
+
+.sidebar a:hover {
+  background: #d2691e; /* chocolate orange */
+  padding-left: 28px;
+}
+
+.sidebar a::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffd27f;
+  transition: width 0.3s;
+}
+
+.sidebar a:hover::after {
+  width: 70%;
+}
+
+/* Main content wrapper */
+.main-content {
+  margin-left: 220px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+/* Background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe5b4, #fff3e0);
+  background: url(Slike/cookingbck.jpg) no-repeat;
+  background-size: cover;
+  color: #3a2c2c;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Header */
+header {
+  background: rgba(255, 250, 243, 0.95); /* Light beige background with slight transparency */
+  border: 5px solid #d35400; /* Warm orange border */
+  padding: 20px 30px; /* Inner spacing for the box, reduced if needed */
+  border-radius: 60px; /* Rounded corners for a soft look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 60px auto 00; /* Top margin to create space from the top, auto for horizontal centering */
+  max-width: 40%; /* Limits the box width */
+  text-align: center; /* Centers the content inside */
+  /* Optional: Add a max-height or min-height if needed */
+  /* max-height: 200px; /* Uncomment and adjust if the content height needs limiting */
+}
+
+h1 {
+  color: #ffa600;
+  font-size: 4.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+p {  
+  text-align: center;
+  color: #333; /* Ensure paragraph is readable */
+  margin: 0; /* Remove default margin for better control */
+}
+
+h2, h3 {
+  color: #8b2f23;
+}
+
+/* Shop Grid */
+.shop-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 50px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Product Cards */
+.product-card {
+  background: #fffdf8;
+  border-radius: 30px 10px 30px 10px; /* Organic shape */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  perspective: 1000px; /* For 3D tilt */
+}
+
+.product-card:hover {
+  transform: rotateY(5deg) rotateX(5deg) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 4px solid #a0522d;
+  transition: filter 0.3s;
+}
+
+.product-card:hover img {
+  filter: brightness(1.1);
+}
+
+/* Product Text */
+.product-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.4rem;
+  color: #8b2f23;
+  font-family: 'Poppins', sans-serif;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  padding: 0 1rem;
+  color: #3a2c2c;
+  min-height: 60px;
+}
+
+/* Price & Button */
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.8rem 0;
+  color: #3a2c2c;
+}
+
+.buy-btn {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #ff7f50, #d35400);
+  color: #fff8f0;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 30px;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.buy-btn:hover {
+  background: linear-gradient(135deg, #d35400, #ff7f50);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 127, 80, 0.5); /* Vivid glow */
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #3a2c2c, #5a3e2b);
+  color: #fff5e1;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+footer p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer .footer-section {
+  flex: 0 1 200px;
+  min-width: 200px;
+  text-align: left;
+}
+
+footer .footer-section h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+footer .footer-section p {
+  margin: 4px 0;
+  font-size: 16px;
+}
+
+footer .footer-section a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin: 4px 0;
+  transition: color 0.3s, transform 0.3s;
+}
+
+footer .footer-section a:hover {
+  color: #ff8243;
+  transform: translateX(5px);
+}
+
+footer .footer-section.social {
+  text-align: right;
+}
+
+footer hr {
+  border: 0;
+  border-top: 1px solid #444;
+  margin: 30px auto;
+  max-width: 100px;
+}
+
+footer .copyright {
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  footer .footer-section {
+    text-align: center;
+  }
+  footer .footer-section.social {
+    text-align: center;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* Same as in main.css */
+}

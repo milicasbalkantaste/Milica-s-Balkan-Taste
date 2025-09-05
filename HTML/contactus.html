@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="contactus.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Milica's Balkan Taste</title>
+</head>
+<body>
+ <div class="sidebar">
+  <h2>Menu</h2>
+  <a href="/">Home</a>
+  <a href="/Shop.html">Shop</a>
+  <a href="/aboutus.html">About Us</a>
+  <a href="/services.html">Services</a>
+  <a href="/contactus.html">Contact</a>
+</div>
+
+  <header>
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you</p>
+  </header>
+
+  <div class="contact-container">
+    <form action="https://formspree.io/f/mwpnpwzg" method="POST" class="contact-form">
+      <h2>Contact Us</h2>
+
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email" name="email" placeholder="your@example.com" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-comment-dots"></i>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+      <p id="form-status"></p>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2025 Milica's Balkan Taste – All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

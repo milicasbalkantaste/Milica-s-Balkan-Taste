@@ -1,0 +1,20 @@
+.services-coming-soon {
+  width: 100%;
+  padding: 100px 20px;
+  text-align: center;
+  background: #ffffff; /* light gray */
+  border-radius: 12px;
+  margin: 40px 0;
+}
+
+.services-coming-soon h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.services-coming-soon p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #777;
+}
